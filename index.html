@@ -55,6 +55,40 @@ input:focus-visible {
 [hidden] {
   display: none !important;
 }
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-container {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 
 /* =====================================
    HEADER AND BRAND
