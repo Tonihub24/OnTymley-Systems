@@ -66,7 +66,7 @@ body {
 }
 
 body {
-  margin: 55px;
+  margin: 82px;
   min-height: 100vh;
   background: #d7e1d5ed;
   color: var(--text);
@@ -105,7 +105,7 @@ input:focus-visible {
   align-items: center;
   gap: 35px;
   text-align: left;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 4px solid var(--border);
 }
 
 .brand-header {
@@ -782,12 +782,12 @@ input:focus-visible {
 
 .review-dashboard {
   position: fixed;
-  left: 20px;
-  top: 50%;
+  left: 151px;
+  top: 44%;
   transform: translateY(-50%);
   z-index: 1;
 
-  width: min(520px, 43vw);
+  width: min(660px, 66vw);
   margin: 0;
 
   display: grid;
@@ -1112,7 +1112,7 @@ footer {
   .header-label {
     max-width: 100%;
     font-size: 9px;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
   }
 
   .content {
@@ -1290,6 +1290,94 @@ body:has(#signupForm:not([hidden])) #signupForm {
   }
 
 }
+@media (max-width: 650px) {
+  .site-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .brand {
+    margin: 0 auto;
+  }
+}
+
+/* MOBILE — CENTER HEADER AT TOP */
+
+@media screen and (max-width: 650px) {
+
+  body {
+    margin: 16px !important;
+    width: auto !important;
+  }
+
+  .site-header {
+    position: relative;
+    top: 0;
+    left: auto;
+    right: auto;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 10px 0 20px !important;
+    gap: 12px !important;
+
+    text-align: center !important;
+  }
+
+  .brand-header {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center !important;
+    margin: 0 auto !important;
+  }
+
+  .brand-name {
+    justify-content: center !important;
+  }
+
+  .brand-systems {
+    align-self: center !important;
+    text-align: center !important;
+  }
+
+  .header-label {
+    width: 100%;
+    max-width: 340px;
+    text-align: center !important;
+    font-size: 9px;
+    line-height: 1.7;
+    letter-spacing: 1.5px;
+  }
+}
+.brand-header {
+    position: relative;
+    display: inline-flex;
+    padding: 10px 18px 10px 12px;
+    border-left: 2px solid #2563eb;
+    border-top: 2px solid #2563eb;
+    
+    text-decoration: none;
+}
+
+.brand-header::after {
+    content: "";
+    position: absolute;
+    right: -12px;
+    top: 50%;
+    width: 12px;
+    height: 2px;
+    background: #2563eb;
+    transform: translateY(-50%);
+}
 
   </style>
 </head>
@@ -1321,11 +1409,7 @@ body:has(#signupForm:not([hidden])) #signupForm {
 
     <p class="eyebrow"></p>
 
-    <p class="subtitle">
-      AI can help you build an application. But when it's time
-      to update it, do you know what changed, what could break,
-      and how to recover?
-    </p>
+    
 
     <button
       class="signup-trigger"
