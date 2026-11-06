@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OnTimley Systems</title>
+
+<style>
+:root {
+  --bg: #d7e1d5ed;
+  --blue: #2887f3;
+  --dark: #111827;
+  --cyan: #0891b2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--dark);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.landing {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+/* BRAND HEADER */
+
+.brand-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  line-height: 1;
+  margin-bottom: 42px;
+}
+
+.brand-name {
+  display: flex;
+  align-items: baseline;
+  white-space: nowrap;
+}
+
+.brand-on {
+  font-family: "Comic Sans MS", cursive;
+  font-size: clamp(29px, 5vw, 42px);
+  font-weight: 700;
+  font-style: italic;
+  color: var(--blue);
+  transform: rotate(-8deg);
+  margin-right: -4px;
+}
+
+.brand-timley {
+  font-size: clamp(38px, 7vw, 58px);
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -2px;
+}
+
+.brand-systems {
+  align-self: flex-end;
+  margin-top: 8px;
+  padding-right: 3px;
+  font-family: monospace;
+  font-size: 11px;
+  letter-spacing: 5px;
+  color: var(--cyan);
+}
+
+/* SLOGAN */
+
+.slogan {
+  max-width: 850px;
+  margin: 0 auto;
+  font-size: clamp(17px, 3vw, 27px);
+  font-weight: 800;
+  line-height: 1.8;
+  letter-spacing: 1.5px;
+  color: var(--dark);
+}
+
+/* WELCOME BUTTON */
+
+.welcome {
+  display: inline-block;
+  margin-top: 42px;
+  padding: 10px 23px;
+  border: 1px solid var(--blue);
+  border-radius: 30px;
+  background: var(--blue);
+  color: white;
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  animation: float 3s ease-in-out infinite;
+  transition: all .3s ease;
+}
+
+.welcome:hover {
+  background: transparent;
+  color: var(--blue);
+  transform: translateY(-3px);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@media (max-width: 600px) {
+  .brand-header {
+    margin-bottom: 32px;
+  }
+
+  .slogan {
+    font-size: 17px;
+    letter-spacing: 1px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<main class="landing">
+
+  <a href="home.html" class="brand-header">
+    <div class="brand-name">
+      <span class="brand-on">On</span>
+      <span class="brand-timley">Timley</span>
+    </div>
+    <span class="brand-systems">SYSTEMS</span>
+  </a>
+
+
+  <a href="home.html" class="welcome">
+    WELCOME &nbsp; →
+  </a>
+
+</main>
+
+</body>
+</html>
