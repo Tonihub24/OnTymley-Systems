@@ -66,9 +66,9 @@ body {
 }
 
 body {
-  margin: 82px;
+  margin: 55px;
   min-height: 100vh;
-  background: #daf2d691;
+  background: #d7e1d5ed;
   color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
@@ -105,7 +105,7 @@ input:focus-visible {
   align-items: center;
   gap: 35px;
   text-align: left;
-  border-bottom: 4px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .brand-header {
@@ -145,7 +145,7 @@ input:focus-visible {
 }
 
 .brand-on {
-  font-family: "Comic Sans MS";
+  font-family: "Comic Sans MS", cursive;
   font-size: clamp(29px, 3vw, 22px);
   font-weight: 700;
   font-style: italic;
@@ -155,7 +155,7 @@ input:focus-visible {
 }
 
 .brand-timley {
-    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    font-family: "fantasy";
     font-size: clamp(24px, 5vw, 42px);
     font-weight: 800;
     color: #111827;
@@ -782,12 +782,12 @@ input:focus-visible {
 
 .review-dashboard {
   position: fixed;
-  left: 151px;
-  top: 44%;
+  left: 20px;
+  top: 50%;
   transform: translateY(-50%);
   z-index: 1;
 
-  width: min(660px, 66vw);
+  width: min(520px, 43vw);
   margin: 0;
 
   display: grid;
@@ -1358,26 +1358,6 @@ body:has(#signupForm:not([hidden])) #signupForm {
     letter-spacing: 1.5px;
   }
 }
-.brand-header {
-    position: relative;
-    display: inline-flex;
-    padding: 10px 18px 10px 12px;
-    border-left: 2px solid #2563eb;
-    border-top: 2px solid #2563eb;
-    
-    text-decoration: none;
-}
-
-.brand-header::after {
-    content: "";
-    position: absolute;
-    right: -12px;
-    top: 50%;
-    width: 12px;
-    height: 2px;
-    background: #2563eb;
-    transform: translateY(-50%);
-}
 
   </style>
 </head>
@@ -1409,7 +1389,11 @@ body:has(#signupForm:not([hidden])) #signupForm {
 
     <p class="eyebrow"></p>
 
-    
+    <p class="subtitle">
+      AI can help you build an application. But when it's time
+      to update it, do you know what changed, what could break,
+      and how to recover?
+    </p>
 
     <button
       class="signup-trigger"
@@ -1750,10 +1734,13 @@ body:has(#signupForm:not([hidden])) #signupForm {
           </button>
         </div>
       </section>
+          </div><!-- END ai-review-column -->
+
+  </section><!-- END review-dashboard -->
 
   <!-- FOOTER -->
   <footer>
-    LEARN. BUILD. GROW. &nbsp; / &nbsp; ONTIMLEY SYSTEMS
+    LEARN. BUILD. GROW. &nbsp; / &nbsp; ONTIMLEY SYSTEMS;
   </footer>
 
   <!-- SIGNUP INTERACTION -->
@@ -1882,4 +1869,3 @@ body:has(#signupForm:not([hidden])) #signupForm {
 
 </body>
 </html>
-```
