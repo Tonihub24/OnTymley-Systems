@@ -265,6 +265,10 @@ input:focus-visible {
     overflow-y: auto;
     animation: backdropFade 0.25s ease;
 }
+    /* Keep the signup overlay completely hidden until opened */
+.form-container[hidden] {
+    display: none !important;
+}
 
 .bubble-form {
   display: flex;
@@ -1400,7 +1404,10 @@ body:has(#signupForm:not([hidden])) #signupForm {
       JOIN NOW +
     </button>
 
-    <!-- SIGNUP OVERLAY -->
+
+
+  </main>
+      <!-- SIGNUP OVERLAY -->
     <section
       class="form-container"
       id="signupForm"
@@ -1537,8 +1544,6 @@ body:has(#signupForm:not([hidden])) #signupForm {
       </form>
 
     </section>
-
-  </main>
 
   <!-- CHANGE TO CONFIDENCE -->
   <section
@@ -1808,6 +1813,7 @@ body:has(#signupForm:not([hidden])) #signupForm {
         aboutStatus.textContent = "Please choose an option to continue.";
         return;
       }
+      
 
       selectedOption = selected.value;
 
